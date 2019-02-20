@@ -7,23 +7,6 @@ red='\e[1;31m'
 blue='\e[0;34m'
 reset='\e[0m'
 
-### Check Internet ###
-{
-  ping -c 1 google.com > /dev/null
-  if [[ "$?" != 0 ]]
-  then
-    echo -e $red"Checking For Internet: FAILED
-    This Script Needs An Active Internet Connection"
-    echo " Good Bye 😊"
-    echo && sleep 2
-    exit
-  else
-    echo -e $lightgreen " -----------------------------------"
-    echo -e $white " Checking For Internet: $red CONNECTED"
-    echo -e $lightgreen " -----------------------------------"
-  fi
-}
-
 ### Function Banner ###
 echo -e $red"+++++++++++++++++++++++++++++++++++++++++++++"
 echo -e $blue"╔═══╗╔═══╗╔╗──╔╗╔═══╗╔═══╗╔═══╗╔═══╗╔══╗╔═══╗"$red"+"
